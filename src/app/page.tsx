@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SdkIntegration } from "@/components/SdkIntegration";
 import { 
   CheckCircle2, 
   ShieldCheck, 
@@ -183,51 +184,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Integration Section */}
-      <section className="bg-speedify-green text-white py-24 px-6 rounded-[3rem] mx-4 md:mx-6 overflow-hidden relative shadow-2xl">
-         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-         
-         {/* Glow effects */}
-         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-speedify-lime/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-         
-         <div className="max-w-4xl mx-auto text-center relative z-10">
-            <div className="inline-block border border-speedify-lime/30 bg-speedify-lime/10 px-4 py-1.5 rounded-full text-xs font-mono mb-8 tracking-wide text-speedify-lime">
-                SDK INTEGRATION
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Don't replace. Integrate.</h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-12 leading-relaxed">
-                The code that connects your users to compliance. Add our SDK to your React, React Native, iOS, or Android app in under 30 minutes.
-            </p>
-
-            {/* Code Block */}
-            <div className="bg-[#051F16]/80 backdrop-blur-md rounded-2xl p-6 text-left font-mono text-sm border border-white/10 max-w-2xl mx-auto shadow-2xl overflow-x-auto transform hover:scale-[1.01] transition-transform cursor-text group">
-                <div className="flex gap-1.5 mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
-                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <div className="space-y-2 leading-relaxed">
-                    <p><span className="text-purple-400">import</span> <span className="text-yellow-200">{"{ Speedify }"}</span> <span className="text-purple-400">from</span> <span className="text-green-300">'@speedify/react'</span>;</p>
-                    <p>&nbsp;</p>
-                    <p><span className="text-purple-400">return</span> (</p>
-                    <p className="pl-4">{"<"}<span className="text-blue-300">Speedify</span></p>
-                    <p className="pl-8"><span className="text-blue-200">apiKey</span>=<span className="text-green-300">"pk_live_..."</span></p>
-                    <p className="pl-8"><span className="text-blue-200">onSuccess</span>={"{(result) => console.log(result)}"}</p>
-                    <p className="pl-4">{"/>"}</p>
-                    <p>);</p>
-                </div>
-            </div>
-            
-            <div className="mt-12 flex flex-wrap justify-center gap-4">
-                 {/* Tech Stack Icons */}
-                 {['React', 'Vue', 'Angular', 'iOS', 'Android', 'Flutter'].map((tech) => (
-                    <div key={tech} className="bg-white/5 border border-white/5 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-white/10 transition-colors cursor-default backdrop-blur-sm">
-                        {tech}
-                    </div>
-                 ))}
-            </div>
-         </div>
-      </section>
+      <SdkIntegration />
 
       {/* Stats */}
       <section className="bg-speedify-bg py-24 border-b border-gray-100">
